@@ -1,3 +1,6 @@
+
+<?=$this->section('content')?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +14,10 @@
 
     <title>Carousel Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS-->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href=".../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- IE10 viewport hack for Srface/desktop Windows 8 bug -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -30,12 +31,6 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    <link href="../dist/css/carousel.css" rel="stylesheet">
 
 </head>
-<body>
-
-<?=$this->section('content')?>
-
-</body>
-</html>

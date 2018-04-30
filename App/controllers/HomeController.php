@@ -54,7 +54,6 @@ class HomeController
 
     public function reg()
     {
-        echo '<h1>'."регистрация".'</h1>';
         echo $this->view->render('showregistr',['massiv' => $_SERVER]);
     }
 
