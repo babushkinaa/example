@@ -79,23 +79,23 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
             <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Повторите пароль" name="rpassword" /> </div>
-        <div class="form-group margin-top-20 margin-bottom-20">
-            <label class="mt-checkbox mt-checkbox-outline">
-                <input type="checkbox" name="tnc" /> I agree to the
-                <a href="javascript:;">Terms of Service </a> &
-                <a href="javascript:;">Privacy Policy </a>
-                <span></span>
-            </label>
-            <div id="register_tnc_error"> </div>
-        </div>
+<!--        <div class="form-group margin-top-20 margin-bottom-20">-->
+<!--            <label class="mt-checkbox mt-checkbox-outline">-->
+<!--                <input type="checkbox" name="tnc" /> I agree to the-->
+<!--                <a href="javascript:;">Terms of Service </a> &-->
+<!--                <a href="javascript:;">Privacy Policy </a>-->
+<!--                <span></span>-->
+<!--            </label>-->
+<!--            <div id="register_tnc_error"> </div>-->
+<!--        </div>-->
         <div class="form-actions">
-<!--            <button type="button" href="/"  class="btn green btn-outline">Back</button>-->
+            <button type="button" href="/"  class="btn green btn-outline">Back</button>
             <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">Регистрация</button>
         </div>
     </form>
     <!-- END REGISTRATION FORM -->
 </div>
-<div class="copyright"> 2014 © Metronic. Admin Dashboard Template. </div>
+<!--<div class="copyright"> 2014 © Metronic. Admin Dashboard Template. </div>-->
 <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>
 <script src="../assets/global/plugins/excanvas.min.js"></script>

@@ -62,6 +62,11 @@ class HomeController
         echo $this->view->render('login',['massiv' => $_SERVER]);
     }
 
+    public function loginpost()
+    {
+        echo $this->view->render('loginpost',['massiv' => $_SERVER]);
+    }
+
     public function regpost()
     {
         $post = $_POST;

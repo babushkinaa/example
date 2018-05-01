@@ -28,6 +28,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('POST', '/reg',["\App\controllers\HomeController","regpost"]);
     $r->addRoute('GET', '/regfinish',["\App\controllers\HomeController","regfinish"]);
     $r->addRoute('GET', '/login',["\App\controllers\HomeController","login"]);
+    $r->addRoute('POST', '/login',["\App\controllers\HomeController","loginpost"]);
 
 
 });
