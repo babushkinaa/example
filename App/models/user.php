@@ -6,8 +6,13 @@
  * Time: 2:03
  */
 
-namespace App\models;
 
+
+namespace App\models;
+namespace App\controllers;
+
+//require_once '../../vendor/autoload.php';
+//require "autoload.php";
 
 use Aura\SqlQuery\QueryFactory;
 use Delight\Auth\Auth;
@@ -15,36 +20,18 @@ use PDO;
 
 class user
 {
-    /**
-     * @var \Delight\Auth\Auth
-     */
-    private $auth;
 
-    public $pdo = new PDO("mysql:host=localhost;dbname=lerning","root","root");
+    public $db;
+    public $user;
 
 
-    function __construct(Auth $auth($pdo))
+    function __construct()
     {
 
-        $this->auth = $auth;
+        $this->db = new PDO("mysql:host=localhost;dbname=lerning","root","root");
+        $this->user = new Auth($this->db);
 
     }
 
-    public function registration()
-    {
-        $user = new Auth();
-        $user->register()
-    }
-
-
-    public function getAvatar()
-    {
-
-    }
-
-    public function getUser($id)
-    {
-        echo "user";
-    }
 
 }

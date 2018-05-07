@@ -16,6 +16,10 @@ $containerBuilder->addDefinitions([
     },
     PDO::class => function() {
         return new PDO("mysql:host=localhost;dbname=lerning","root","root");
+    },
+    User::class => function(){
+        $db = new PDO("mysql:host=localhost;dbname=lerning","root","root");
+        return $db;
     }
 ]);
 
@@ -29,6 +33,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/regfinish',["\App\controllers\HomeController","regfinish"]);
     $r->addRoute('GET', '/login',["\App\controllers\HomeController","login"]);
     $r->addRoute('POST', '/login',["\App\controllers\HomeController","loginpost"]);
+    $r->addRoute('POST', '/user',["\App\controllers\HomeController","user"]);
+    $r->addRoute('GET', '/user',["\App\controllers\HomeController","user"]);
 
 
 });

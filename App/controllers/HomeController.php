@@ -5,7 +5,8 @@ namespace App\controllers;
 use App\model\QueryBuilder;
 use League\Plates\Engine;
 use Aura\SqlQuery\QueryFactory;
-use App\models\user;
+use App\models\users;
+use \Delight\Auth\Auth;
 use PDO;
 
 
@@ -14,13 +15,15 @@ class HomeController
     private $view;
     private $queryFactory;
     private $pdo;
+    private $diver;
 
 
-    public function __construct(Engine $view, QueryFactory $queryFactory, PDO $pdo)
+    public function __construct(Engine $view, QueryFactory $queryFactory, PDO $pdo, users $users)
     {
         $this->view = $view;
         $this->queryFactory = $queryFactory;
         $this->pdo = $pdo;
+        $this->diver = $users;
     }
 
 //    public function index()
@@ -57,6 +60,13 @@ class HomeController
         echo $this->view->render('showregistr',['massiv' => $_SERVER]);
     }
 
+    public function user()
+    {
+        $auth = new \Delight\Auth\Auth($this->pdo);
+        $id = $auth->getUserId();
+        echo $this->view->render('user', ['mass'=>'hhhhhh']);
+
+    }
     public function login()
     {
         echo $this->view->render('login',['massiv' => $_SERVER]);
@@ -76,6 +86,7 @@ class HomeController
 
     public function go()
     {
+        $this->diver->getID();
         echo $this->view->render('index',['massiv' => $_SERVER]);
     }
 
