@@ -1,7 +1,12 @@
 <?php
 
+namespace App\models;
+
 require_once '../../vendor/autoload.php';
 use Delight\Auth\Auth;
+use App\models\users;
+use App\models\database;
+
 
 
 $db = new PDO("mysql:host=localhost;dbname=lerning","root","root");
